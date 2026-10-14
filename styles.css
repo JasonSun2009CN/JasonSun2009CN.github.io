@@ -1,0 +1,133 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --border: #dbe3f0;
+  --ok: #0f766e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+header {
+  background: #0b1220;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.nav {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a {
+  color: #dbeafe;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.nav a:hover { color: #fff; }
+
+main {
+  width: min(1080px, 92%);
+  margin: 2rem auto 3rem;
+}
+
+.hero,
+.card,
+.page-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.hero h1,
+h2,
+h3 { margin-top: 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.tag {
+  padding: .15rem .55rem;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: .8rem;
+}
+
+.status {
+  display: inline-block;
+  font-size: .82rem;
+  color: var(--ok);
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  padding: .12rem .5rem;
+  border-radius: 999px;
+}
+
+.actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: .35rem .7rem;
+  border-radius: 8px;
+}
+
+.button.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.muted { color: var(--muted); }
+
+footer {
+  width: min(1080px, 92%);
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+ul.tight li { margin: .2rem 0; }
+
+@media (max-width: 640px) {
+  .nav { gap: .6rem; }
+  .nav .links { width: 100%; display: flex; flex-wrap: wrap; gap: .65rem; }
+  .nav a { margin-right: 0; }
+}
